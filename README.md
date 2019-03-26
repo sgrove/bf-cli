@@ -1,5 +1,6 @@
 # packageinfo-cli
 
+Quick install: `esy i && esy pesy && esy b && esy x PackageinfoCliApp.exe`
 
 [![CircleCI](https://circleci.com/gh/yourgithubhandle/packageinfo-cli/tree/master.svg?style=svg)](https://circleci.com/gh/yourgithubhandle/packageinfo-cli/tree/master)
 

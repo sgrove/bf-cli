@@ -21,7 +21,6 @@
       "namespace": "PackageinfoCli"
     },
     "executable": {
-      "preprocess": ["pps", "graphql_ppx"],
       "require": ["packageinfo-cli.lib", "async", "cohttp-async", "core", "uri", "yojson"],
       "main": "PackageinfoCliApp",
       "name": "PackageinfoCliApp.exe"
@@ -41,8 +40,6 @@
     "@opam/yojson": "1.7.0",
     "@opam/dune": ">=1.6.0",
     "@opam/sexplib": "*",
-    "graphql_ppx_base": "*",
-    "graphql_ppx": "*",
     "@esy-ocaml/reason": "*",
     "refmterr": "*",
     "ocaml": "^4.4.0",

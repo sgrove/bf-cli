@@ -8,5 +8,4 @@
    ; The name of the executable (runnable via esy x PackageinfoCliApp.exe) 
    (public_name PackageinfoCliApp.exe)  ;  From package.json name field
    (libraries  packageinfo-cli.lib async cohttp-async core uri yojson ) ;  From package.json require field (array of strings)
-   (preprocess ( pps graphql_ppx ))  ; From package.json preprocess field
 )
