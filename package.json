@@ -1,0 +1,58 @@
+{
+  "name": "packageinfo-cli",
+  "version": "0.0.0",
+  "description": "My Project",
+  "esy": {
+    "build": "pesy",
+    "release": {
+      "releasedBinaries": [
+        "PackageinfoCliApp.exe"
+      ]
+    }
+  },
+  "buildDirs": {
+    "test": {
+      "require": ["packageinfo-cli.lib"],
+      "main": "TestPackageinfoCli",
+      "name": "TestPackageinfoCli.exe"
+    },
+    "library": {
+      "name": "packageinfo-cli.lib",
+      "namespace": "PackageinfoCli"
+    },
+    "executable": {
+      "preprocess": ["pps", "graphql_ppx"],
+      "require": ["packageinfo-cli.lib", "async", "cohttp-async", "core", "uri", "yojson"],
+      "main": "PackageinfoCliApp",
+      "name": "PackageinfoCliApp.exe"
+    }
+  },
+  "scripts": {
+    "pesy": "bash -c 'env PESY_MODE=update pesy'",
+    "test": "esy x TestPackageinfoCli.exe"
+  },
+  "dependencies": {
+    "@opam/async": "*",
+    "@opam/async_ssl": "*",
+    "@opam/core": "*",
+    "@opam/cohttp": "2.0.0",
+    "@opam/cohttp-async": "*",
+    "@opam/tls": "0.10.1",
+    "@opam/yojson": "1.7.0",
+    "@opam/dune": ">=1.6.0",
+    "@opam/sexplib": "*",
+    "graphql_ppx_base": "*",
+    "graphql_ppx": "*",
+    "@esy-ocaml/reason": "*",
+    "refmterr": "*",
+    "ocaml": "^4.4.0",
+    "pesy": "*"
+  },
+  "resolutions": {
+    "graphql_ppx_base": "mhallin/graphql_ppx:graphql_ppx_base.opam#5796b3759bdf0d29112f48e43a2f0623f7466e8a",
+    "graphql_ppx": "mhallin/graphql_ppx:graphql_ppx.opam#5796b3759bdf0d29112f48e43a2f0623f7466e8a"
+  },
+  "devDependencies": {
+    "@opam/merlin": "*"
+  }
+}
